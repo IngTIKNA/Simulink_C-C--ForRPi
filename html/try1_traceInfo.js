@@ -1,0 +1,31 @@
+function RTW_rtwnameSIDMap() {
+	this.rtwnameHashMap = new Array();
+	this.sidHashMap = new Array();
+	this.rtwnameHashMap["<Root>"] = {sid: "try1"};
+	this.sidHashMap["try1"] = {rtwname: "<Root>"};
+	this.rtwnameHashMap["<S1>"] = {sid: "try1:1"};
+	this.sidHashMap["try1:1"] = {rtwname: "<S1>"};
+	this.rtwnameHashMap["<Root>/p1"] = {sid: "try1:5"};
+	this.sidHashMap["try1:5"] = {rtwname: "<Root>/p1"};
+	this.rtwnameHashMap["<Root>/Lane_keeping_control "] = {sid: "try1:1"};
+	this.sidHashMap["try1:1"] = {rtwname: "<Root>/Lane_keeping_control "};
+	this.rtwnameHashMap["<Root>/Steering"] = {sid: "try1:6"};
+	this.sidHashMap["try1:6"] = {rtwname: "<Root>/Steering"};
+	this.rtwnameHashMap["<Root>/Velocity "] = {sid: "try1:7"};
+	this.sidHashMap["try1:7"] = {rtwname: "<Root>/Velocity "};
+	this.rtwnameHashMap["<S1>/p1"] = {sid: "try1:2"};
+	this.sidHashMap["try1:2"] = {rtwname: "<S1>/p1"};
+	this.rtwnameHashMap["<S1>/Add"] = {sid: "try1:9"};
+	this.sidHashMap["try1:9"] = {rtwname: "<S1>/Add"};
+	this.rtwnameHashMap["<S1>/Constant"] = {sid: "try1:8"};
+	this.sidHashMap["try1:8"] = {rtwname: "<S1>/Constant"};
+	this.rtwnameHashMap["<S1>/Constant1"] = {sid: "try1:10"};
+	this.sidHashMap["try1:10"] = {rtwname: "<S1>/Constant1"};
+	this.rtwnameHashMap["<S1>/Steering "] = {sid: "try1:4"};
+	this.sidHashMap["try1:4"] = {rtwname: "<S1>/Steering "};
+	this.rtwnameHashMap["<S1>/Velocity"] = {sid: "try1:3"};
+	this.sidHashMap["try1:3"] = {rtwname: "<S1>/Velocity"};
+	this.getSID = function(rtwname) { return this.rtwnameHashMap[rtwname];}
+	this.getRtwname = function(sid) { return this.sidHashMap[sid];}
+}
+RTW_rtwnameSIDMap.instance = new RTW_rtwnameSIDMap();
